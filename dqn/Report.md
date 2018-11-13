@@ -25,4 +25,13 @@ We used a simple DQN architecture with the following components.
         * Number fo episodes = 2000
 
 ## Results
-The agent was able to reach an average score of 15 after 800 episodes with this simple architecture.
+ * The agent was able to reach an average score of 15 after 800 episodes with this simple architecture.
+
+## Improvement
+ * One simple improvement is to apply the n-step dqn  to speedup convergence. for more details refere to (Sutton 1988).
+ * The idea is simple:
+    Since Q[St,at] = rt + gamma * max(Q[St+1, at+1])    &
+          Q[St+1,at+1] = rt + gamma * max(Q[St+2, at+2])    than
+          Q[St,at] = rt + gamma * rt+1 + gamma^2 * max(Q[St+2, at+2])
+          
+   So the one step transition simpling will be replaced by longer transition simpling (usually 2 or 3 steps max). 
