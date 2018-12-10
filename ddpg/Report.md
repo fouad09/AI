@@ -34,14 +34,15 @@ We used a DDPG architecture with the following components to solve this continou
 * tau = 1e-3          # parameter used to update the actor and critic target networks 
 * epsilon = 1.0       # variance rate used to generate the noise added to the action vector
 * epsilon_decay=1e-6  # parameter used to decay the variance to and reduce the noise
-        
-### The main function (step 10)
 
 ### results (step 11)
 * The agent was able to reach an average score of 30 after 182 episodes.
 
 ### Test (step 12)
-
-
+* After training, the agent has an average score of 36 after 3 test.
 
 ### improvements
+
+* Simplify the architecture of the actor network.
+* Implement a replay buffer with importance sampling.
+* change the number of updates during the learning step.
