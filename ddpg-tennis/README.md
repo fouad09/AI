@@ -23,6 +23,24 @@ The task is episodic, and in order to solve the environment, your agents must ge
 
 The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
 
+### 6) Install
+This project requires **Python 3.5** or higher, the Tennis Environment (follow the instructions to download [here](INSTRUCTIONS.md)) and the following Python libraries installed:
+
+- [NumPy](http://www.numpy.org/)
+- [Statsmodels](http://www.statsmodels.org/stable/index.html)
+- [Torch](https://pytorch.org)
+- [UnityAgents](https://github.com/Unity-Technologies/ml-agents)
+
+
+### 7) Run
+In a terminal or command window, navigate to the top-level project directory `ddpg-tennis/` (that contains this README) and run the following command:
+
+```shell
+$ jupyter notebook Tennis.ipynb
+```
+
+This will open the Jupyter Notebook software and the main notebook in your browser which you can use to explore and reproduce the experiment that has been run to generate the result provided in the report.
+
 ### 6) Authors
 fouad kouidmir
 
