@@ -39,6 +39,7 @@ We used a DDPG architecture with the following components to solve this continou
 
 ### Test (step 12)
 * After training, the agent has an average score of 0.82 after 10 test.
+![alt text](https://github.com/fouad09/AI/blob/master/ddpg-tennis/reward.png)
 
 ### improvements
 
