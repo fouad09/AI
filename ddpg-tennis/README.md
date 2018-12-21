@@ -2,19 +2,24 @@
 
 ## Geting started
 ### 1) Intro
-In this environment, a double-jointed arm need to move to target locations.
+In this environment, two agents control rackets to bounce a ball over a net.
 
 ### 2) Reward
-A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of the agent is to maintain its position at the target location for as many time steps as possible.
+If an agent hits the ball over the net, it receives a reward of +0.1. If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. Thus, the goal of each agent is to keep the ball in play.
 
 ### 3) State space
-The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm.
+The observation space consists of 24 variables variables corresponding to position and velocity of ball and racket.
 
 ### 4) Action space
-Each action is a vector with four numbers, corresponding to torque applicable to two joints.Every entry in the action vector should be a number between -1 and 1.
+Each action is a vector with 2 numbers, corresponding to movement toward net or away from net, and jumping.Every entry in the action vector should be a number between -1 and 1.
 
 ### 5) Goal
-The task is episodic, and in order to solve the environment, we train 20 agents to get an average score of +30 over 100 consecutive episodes.
+The task is episodic, and in order to solve the environment, your agents must get an average score of +0.5 (over 100 consecutive episodes, after taking the maximum over both agents). Specifically,
+
+* After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 2 (potentially different) scores. We then take the maximum of these 2 scores.
+* This yields a single score for each episode.
+
+The environment is considered solved, when the average (over 100 episodes) of those scores is at least +0.5.
 
 ### 6) Authors
 fouad kouidmir
